@@ -38,9 +38,9 @@ export default {
       type: Boolean,
       default: false,
     },
-    small: {
-      type: Boolean,
-      default: false,
+    size: {
+      type: String,
+      default: 'm',
     },
     lang: {
       type: String,
@@ -91,7 +91,7 @@ export default {
           popupDirection: this.popupTop ? 'top' : 'bottom',
           popupPosition: this.popupOuter ? 'outer' : 'inner',
           services: this.services.join(','),
-          size: this.small ? 's' : 'm',
+          size: this.size,
           colorScheme: this.colorScheme,
         },
         hooks: {
