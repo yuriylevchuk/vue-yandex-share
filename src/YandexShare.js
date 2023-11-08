@@ -66,6 +66,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    colorScheme: {
+      type: String,
+      default: 'normal'
+    },
   },
   mounted() {
     Script.attach().then(() => {
@@ -88,6 +92,7 @@ export default {
           popupPosition: this.popupOuter ? 'outer' : 'inner',
           services: this.services.join(','),
           size: this.small ? 's' : 'm',
+          colorScheme: this.colorScheme,
         },
         hooks: {
           onready: () => { this.$emit('ready'); },
