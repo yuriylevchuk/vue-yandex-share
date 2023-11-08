@@ -1,4 +1,5 @@
 import Script from './Script';
+import { h } from 'vue'
 
 export default {
   name: 'YandexShare',
